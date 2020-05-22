@@ -45,11 +45,172 @@
     window.cookieconsent.initialise({
       "palette": {
         "popup": {"background": "#000000"},
-        "button": {"background": "#FFFFFF", "text": "#000000"}
+        "button": {"background": "#FFFFFF", "text": "#000"}
       },
       "position": "bottom-left",
       "content": {"href": "/cookie-policy/"}
     })});
   </script>
+  
+  <style>
+    
+    .cc-message {
+      color: #fff !important;
+    }
+    
+  </style>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
+  
+  <script>
+    
+    $(document).ready(function(){
+      
+      $(".scrolllink").click(function( event ) {
+        event.preventDefault();
+        //alert('t');
+        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 80 }, 500);
+      });
+      
+      function openMenu(open) { $('#burger').toggleClass('open', open); $('#navigation-mobile ul').toggleClass('open', open); }
+      var open = false;
+      $('#burger').click(function() { open = !open; openMenu(open); });
+
+
+      $(window).scroll(function(){
+        var scrollPos = $(document).scrollTop();
+        
+        if(scrollPos > 5)
+        {
+          $("#header").addClass("stick");
+        }
+        else
+        {
+          $("#header").removeClass("stick");
+        }
+      });
+      
+      $('.alt-slider').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow:4,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+      
+      $('.journey-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow:3,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+      
+      $('.press-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow:6,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        prevArrow: $('.prevv'),
+        nextArrow: $('.nextt'),
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+      
+    });
+    
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
+  
 </head>
 <body <?php body_class(); ?>>

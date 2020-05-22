@@ -34,8 +34,8 @@ $container-max-widths: (
 );
 
 /* Colours. */
-$primary: #000000;
-$secondary: #000000;
+$primary: #4bb5c2;
+$secondary: #19656e;
 $tertiary: #000000;
 $quaternary: #000000;
 $quinary: #000000;
@@ -96,7 +96,7 @@ $spacers: (
 );
 
 /* Typography. */
-$font-family-sans-serif: '';
+$font-family-sans-serif: 'Europa';
 $font-size-base: 1rem;
 $line-height-base: 1.5;
 $h1-font-size: 3.75rem;
@@ -115,3 +115,8 @@ $link-color: $secondary;
 $link-decoration: none;
 $link-hover-color: darken($link-color, 15%);
 $link-hover-decoration: none;
+
+
+$text-primary: #3B3B3B;
+$text-secondary: $primary;
+
