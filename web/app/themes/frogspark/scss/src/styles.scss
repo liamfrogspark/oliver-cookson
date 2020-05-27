@@ -892,7 +892,7 @@ a:hover .bg-grow {
 
 .hero {
   background-size: cover !important;
-  background-position: center center !important;
+  background-position: center 20% !important;
   position: relative;
   z-index: 1;
   padding-top: 200px !important;
@@ -903,13 +903,17 @@ a:hover .bg-grow {
     height: 100%;
     position: absolute;
     z-index: -1;
-    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0));
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.3), rgba(0,0,0,0), rgba(0,0,0,0));
     left: 0px;
     top: 0px;
   }
   
   p {
     color: #fff;
+    
+    em {
+      font-size: 12px;
+    }
   }
   
   a {
@@ -919,6 +923,16 @@ a:hover .bg-grow {
   h1 {
     font-size: 2.8rem;
     color: #fff;
+  }
+}
+
+.grey-hero {
+  p, span {
+    color: #fff;
+    
+    em {
+      font-size: 12px;
+    }
   }
 }
 
@@ -1229,10 +1243,15 @@ a:hover .bg-grow {
     border: 2px solid #b1b1b1 !important;
   }
   
-  .nf-form-wrap nf-fields-wrap nf-field:nth-child(-n+4):nth-child(3) {
+  .nf-form-wrap nf-fields-wrap nf-field:nth-child(-n+4):nth-child(3), .nf-form-wrap nf-fields-wrap nf-field:nth-child(-n+4):nth-child(4) {
     flex: 100%;
     max-width: 100%;
     padding: 0px;
+  }
+  
+  .nf-form-wrap nf-fields-wrap .listselect-wrap .nf-field-element select {
+    background: #fff !important;
+    border: 2px solid #b1b1b1 !important;
   }
   
   .nf-form-wrap .nf-error-msg {
@@ -1256,6 +1275,11 @@ a:hover .bg-grow {
   }
   
 }
+
+.nf-form-wrap nf-fields-wrap .listselect-wrap .nf-field-element select {
+    background: #fff !important;
+    border: 2px solid #b1b1b1 !important;
+  }
 
 .page-template-page-contact {
   
@@ -1419,8 +1443,6 @@ footer .footer-menu ul {
   display: block !important;
 }
 
-
-
 .press-section {
   
   .press-slider {
@@ -1446,7 +1468,12 @@ footer .footer-menu ul {
     img {
       max-width: 100%;
       padding: 0px 15px;  
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     }
+    
+    height: 70px;
     
   }
 }
@@ -1520,11 +1547,14 @@ footer {
     display: block;
     width: 100%;
     
-    a {
+    p, a {
       color: #fff;
       font-size: 10px;
       font-weight: 700;
+      margin-left: 25px;
     }
+    
+
   }
   
 }
@@ -2066,6 +2096,12 @@ footer {
   
   .test-section .book-bg-wrap, .abt-section .book-bg-wrap {
     margin-top: 20px;
+  }
+  
+  footer .text-right a {
+    display: block;
+    margin-left: 0px;
+    margin-top: 15px;
   }
 }
 

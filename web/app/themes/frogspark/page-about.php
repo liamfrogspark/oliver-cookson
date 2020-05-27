@@ -101,7 +101,7 @@
           <div class="book-content" data-aos="fade-up" data-aos-offset="-100">
             <p class="text-primary h5 italic"><?php echo get_field("contact_small_title", 2); ?></p>
             <h2 class="h2"><?php echo get_field("contact_title", 2); ?></h2>
-            <?php echo do_shortcode("[ninja_form id=1]"); ?>
+            <?php echo do_shortcode("[ninja_form id=2]"); ?>
           </div>
         </div>
         
@@ -121,7 +121,7 @@
   
   <?php if(get_field("show_podcast_section", 2)): ?>
   
-  <section class="podcast-section pt-32" style="background: url(<?php echo get_field("podcast_background_image", 2); ?>)">
+  <section class="podcast-section pt-32" style="background: url(<?php echo get_field("podcast_background_image", 2); ?>); display: none;">
     <div class="container">
       <div class="row">
         <div class="col-md-6">

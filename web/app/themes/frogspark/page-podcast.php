@@ -13,28 +13,29 @@
               
               <?php echo get_field("podcast_content", 2); ?>
               <div class="pod-links">
-                <?php if(!empty(get_field("spotify_link", 2))): ?>
-                <a href="<?php echo get_field("spotify_link"); ?>" class="" target="_blank"><img src="/img/spotify.png"></a>
-                <?php endif; ?>
                 <?php if(!empty(get_field("apple_link", 2))): ?>
                 <a href="<?php echo get_field("apple_link", 2); ?>" class="" target="_blank"><img src="/img/apple.png"></a>
                 <?php endif; ?>
+                <?php if(!empty(get_field("spotify_link", 2))): ?>
+                <a href="<?php echo get_field("spotify_link"); ?>" class="" target="_blank"><img src="/img/spotify.png"></a>
+                <?php endif; ?>
+                
               </div>
               
-              <img src="<?php echo get_field("signature_image", 2) ?>" class="sig mt-8">
+<!--               <img src="<?php echo get_field("signature_image", 2) ?>" class="sig mt-8"> -->
               </div>
           </div>
         </div>
         <div class="col-lg-5">
           <div class="book-bg-wrap" data-aos="fade-up"  data-aos-offset="-100">
-            <img src="/img/spotify.jpg" class="hero-pod">
+            <img src="<?php echo get_field("podcast_image", 2) ?>" class="hero-pod">
           </div>
         </div>
       </div>
     </div>
   </section>
   
-  <section class="episodes abt-section py-16">
+  <section class="episodes abt-section py-16" style="display: none;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">

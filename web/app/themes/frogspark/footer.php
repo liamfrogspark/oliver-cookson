@@ -16,7 +16,7 @@
       </div>
       <div class="col-md-12">
       <div class="copy text-right">
-        <a href="https://frogspark.co.uk">Website by Frogspark</a>
+        <p>(c) Oliver Cookson <?php echo date("Y"); ?>, all rights reserved <a href="https://frogspark.co.uk">Website by Frogspark</a></p>
       </div>
       </div>
     </div>
